@@ -1,0 +1,26 @@
+<p class="text-end">
+    <a class="btn link" style="color: #BF7692;" routerLink="/appl/accesos">
+    <small>
+        Volver
+    </small>
+    </a>
+</p>
+
+<div class="mt-1" *ngIf="usuario.priNombre">
+    <p class="text-danger">
+        Estás a punto de eliminar el siguiente usuario:
+    </p>
+    <p>
+        {{usuario.priNombre}} {{usuario.segNombre}} {{usuario.priApellido}} {{usuario.segApellido}} <br>
+        <em class="text-muted">({{usuario.correoElec}})</em>
+    </p>
+
+    <button class="btn btn-danger" [disabled]="sendingData" (click)="eliminarUsuario()">
+        <div *ngIf="sendingData; else sendingFalse">
+            <i class="fa-solid fa-spinner fa-spin-pulse"></i>
+          </div>
+          <ng-template #sendingFalse>
+            Eliminar
+          </ng-template>
+    </button>
+</div>

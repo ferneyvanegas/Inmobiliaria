@@ -1,0 +1,56 @@
+<nav class="navbar navbar-expand-lg bg-transparent">
+    <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/appl/usuario">
+        <img src="../../../../assets/img/logo-mision.png" alt="Logo" width="70" height="40" class="d-inline-block align-text-top">
+    </a>
+
+    <button id="buttonCollapseNavBar" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        
+        <!--Menú accesible en pantallas grandes-->
+        <div class="d-none d-lg-block">
+            <ul class="navbar-nav me-auto mb-2">
+                <li class="nav-item" *ngFor="let i of menu">
+                    <a class="nav-link active" aria-current="page" routerLink="{{i.routerLink}}">
+                        <p class="m-0" style="color: #BF7692;">
+                            {{i.item}}
+                        </p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!--Menú accesible en pantallas pequeñas-->
+        <div class="d-block d-lg-none">
+            <ul class="navbar-nav me-auto mb-2">
+                <li class="nav-item" *ngFor="let i of menu">
+                    <a class="nav-link active" aria-current="page" routerLink="{{i.routerLink}}" (click)="collapseNavBar()">
+                        <p class="m-0" style="color: #BF7692;">
+                            {{i.item}}
+                        </p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="w-100"  *ngIf="usuario">
+            <p class="text-end" style="color: #5B0324;">
+                <strong>
+                    <i class="fa-solid fa-user"></i>
+                    {{usuario.priNombre}} {{usuario.priApellido}}
+                </strong>
+                <a class="btn" routerLink="/appl/usuario" class="btn text-light" style="background-color: #5B0324;">
+                    <i class="fa-solid fa-gear"></i>
+                </a>   
+                <button class="btn text-light ms-1" (click)="cerrarSession()" style="background-color: #5B0324;">
+                    <i class="fa-solid fa-door-open"></i>
+                </button>
+            </p>
+        </div>
+        
+    </div>
+    </div>
+  </nav>

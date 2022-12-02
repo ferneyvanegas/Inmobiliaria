@@ -1,0 +1,32 @@
+[
+    {
+        "icon":"fa-solid fa-cloud-bolt",
+        "developer":"Ferney Vanegas Hernández",
+        "rol":"Líder Equipo",
+        "email":"ferneyvanegas@gmail.com"
+    },
+    {
+        "icon":"fa-solid fa-pen",
+        "developer":"Merilee Jaydeve Miranda Mendieta",
+        "rol":"Diseñadora Software ",
+        "email":"jaydevemiranda28@gmail.com"
+    },
+    {
+        "icon":"fa-solid fa-marker",
+        "developer":"Diego Fernando Lotero Vasquez",
+        "rol":"Diseñador UI",
+        "email":"dlotero17@gmail.com"
+    },
+    {
+        "icon":"fa-solid fa-gear",
+        "developer":"Juan Camilo Larrota Ruiz",
+        "rol":"Adm. Configuración",
+        "email":"larrota.juancamilo@gmail.com"
+    },
+    {
+        "icon":"fa-solid fa-check",
+        "developer":"José Julián Naranjo Florez",
+        "rol":"Tester",
+        "email":"julianflorez2439@gmail.com"
+    }
+]

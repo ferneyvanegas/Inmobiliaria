@@ -1,0 +1,58 @@
+<div class="container">
+  <a class="btn link float-end" style="color: #BF7692;" routerLink="/">
+    <small>
+        Volver
+    </small>
+  </a>
+    <!--Título-->
+    <div class="row">
+        <h6 class="display-6 text-center" style="color: #5B0324;">
+            <strong>
+                Registrate en nuestro sistema
+            </strong>
+        </h6>    
+        
+        <small class="text-secondary text-center">
+            Te enviaremos un correo electrónico con información para que puedas ingresar
+        </small>
+    </div>
+    <!--Título-->
+
+    <!--Formulario-->
+    <form [formGroup]="fg" (ngSubmit)="registrarUsuario()" class="row g-3 mt-3">
+        <div class="col-md-6">
+            <input type="text" formControlName="priNombre" class="form-control" id="primerNombre" placeholder="Primer Nombre">
+          </div>
+          <div class="col-md-6">
+            <input type="text" formControlName="segNombre" class="form-control" id="segundoNombre" placeholder="Segundo Nombre (Opcional)">
+          </div>
+        <div class="col-md-6">
+          <input type="text" formControlName="priApellido" class="form-control" id="primerApellido" placeholder="Primer Apellido">
+        </div>
+        <div class="col-md-6">
+          <input type="text" formControlName="segApellido" class="form-control" id="segundoApellido" placeholder="Segundo Apellido (Opcional)">
+        </div>
+        <div class="col-md-6">
+          <input type="text" formControlName="documento" class="form-control" id="documento" placeholder="Documento">
+        </div>
+        <div class="col-md-6">
+          <input type="text" formControlName="celular" class="form-control" id="celular" placeholder="Celular">
+        </div>
+        <div class="col-md-12">
+            <input type="email" formControlName="correoElec" class="form-control" id="correo" placeholder="Correo Electrónico">
+        </div>
+        <div class="col-12">
+          <p class="text-center">
+             <button [disabled]="!fg.valid || sendingData" class="btn text-light w-50" style="background-color: #5B0324;">
+                <div *ngIf="sendingData; else sendingFalse">
+                  <i class="fa-solid fa-spinner fa-spin-pulse"></i>
+                </div>
+                <ng-template #sendingFalse>
+                  Registrarse
+                </ng-template>
+             </button>
+          </p>
+        </div>
+    </form>
+    <!--Formulario-->
+</div>

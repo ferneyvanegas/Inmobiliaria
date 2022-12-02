@@ -1,0 +1,30 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+    /* background-image: url("../../../../assets/img/carrusel-3.jpg");
+    background-size:cover; */
+}
+.container{
+    background-image: url("../../../../assets/img/carrusel-3.jpg");
+    background-size:cover;
+    height: 60vh;
+
+}
+.principal-card{
+    margin:auto;
+    bottom: -15%;
+    border:  #5B0324 2px solid;
+}
+
+.card-title{
+    color: #5B0324;
+}
+.card-form{
+    border: black 1px solid;
+}
+.card-button{
+    background-color: #5B0324;
+    color: white;
+    
+}

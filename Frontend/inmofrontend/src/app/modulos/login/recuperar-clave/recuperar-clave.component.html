@@ -1,0 +1,40 @@
+
+<div class="container justify-content-center align-items-center">
+    <div class="card w-75 text-center principal-card">
+        <div class="card-body">
+            <a class="btn link float-end" style="color: #BF7692;" routerLink="/">
+                <small>
+                    Volver
+                </small>
+            </a>
+
+            <h3 class="card-title">
+                Recuperar contraseña
+            </h3>
+            <p class="card-text">
+                Ingrese su correo electronico para recuperar su contraseña.
+            </p>
+            
+            <form [formGroup]="fg" (ngSubmit)="recuperarPass()" class="form-inline">
+                <div class="form-group mx-4 mb-2">
+                    <input type="email" formControlName="correoElec" class="card-form form-control" id="email" placeholder="Correo electronico">
+                </div>
+                <div class="text-end mx-4 ">
+                    <p class="text-center">
+                        <button [disabled]="!fg.valid || sendingData" class="btn text-light w-50" style="background-color: #BF7692;">
+                            <div *ngIf="sendingData; else sendingFalse">
+                                <i class="fa-solid fa-spinner fa-spin-pulse"></i>
+                              </div>
+                              <ng-template #sendingFalse>
+                                Enviar
+                              </ng-template>
+                        </button>
+                    </p>
+                </div>
+              </form>
+
+        </div>
+    </div>
+</div>
+
+ 

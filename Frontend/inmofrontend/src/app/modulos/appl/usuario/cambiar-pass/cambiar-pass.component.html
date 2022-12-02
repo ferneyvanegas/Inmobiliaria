@@ -1,0 +1,39 @@
+<div class="container">
+
+    <!--Título-->
+    <div class="row mt-2">
+        <h6 class="display-6 text-center" style="color: #5B0324;">
+            <strong>
+                Actualizar Contraseña
+            </strong>
+        </h6>    
+    </div>
+    <!--Título-->
+
+    <!--Formulario-->
+    <form [formGroup]="fg" (ngSubmit)="cambiarPass()" class="row g-2 mt-2">
+        <div class="col-10">
+            <input type="password" class="form-control" formControlName="actual" id="claveActual" placeholder=" Ingrese su Contraseña Actual">
+          </div>   
+        <div class="col-10">
+          <input type="password" class="form-control" formControlName="nueva" id="ClaveNueva" placeholder="Ingrese una Nueva Contraseña">
+        </div>
+        <div class="col-10">
+          <input type="password" class="form-control" formControlName="revalidar" id="ConfClaveNueva" placeholder=" Confirme su Nueva Contraseña">
+        </div>
+          <small>
+              <em class="text-muted">
+                <i class="fa-solid fa-circle-info"></i>
+                La contraseña debe ser de mínimo 8 caracteres
+              </em>
+          </small>
+        <div class="col-12">
+          <p class="text-center">
+             <button [disabled]="!fg.valid || !compararPass()" class="btn text-light w-50" style="background-color: #BF7692;">
+                Actualizar
+             </button>
+          </p>
+        </div>
+    </form>
+    <!--Formulario-->
+</div>

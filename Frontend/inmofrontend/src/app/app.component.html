@@ -1,0 +1,52 @@
+<div class="content-outer-container">
+    <div class="content-inner-container">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+
+<div class="footer-container">
+    <div class="footer-content">
+        <app-pie-pagina></app-pie-pagina>
+    </div>
+</div>
+
+
+<!-- Button trigger modal -->
+<button type="button" id="btnMsn" class="btn" data-bs-toggle="modal" data-bs-target="#msnModal" style="display:none;">
+</button>
+  
+<!-- Modal -->
+<div class="modal fade" id="msnModal" tabindex="-1" aria-labelledby="msnModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="msnModalLabel">
+                    <div class="div" *ngIf="type == 'warning'">
+                        <em class="text-primary">
+                            Atención
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                        </em> 
+                    </div>
+
+                    <div class="div" *ngIf="type == 'error'">
+                        <em class="text-danger">
+                            Error
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                        </em> 
+                    </div>
+
+                    <div class="div" *ngIf="type == 'success'">
+                        <em class="text-success">
+                            Transacción exitosa
+                            <i class="fa-solid fa-thumbs-up"></i>
+                        </em> 
+                    </div>
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                {{msn}}
+            </div>
+        </div>
+    </div>
+</div>

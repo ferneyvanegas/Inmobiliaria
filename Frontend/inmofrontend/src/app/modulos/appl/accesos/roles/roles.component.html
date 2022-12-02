@@ -1,0 +1,11 @@
+<div class="mb-3" *ngIf="roles">
+    <div class="container">
+        <div class="row">
+            <div *ngFor="let rol of roles" class="col-2 m-1 alert alert-warning bg-light" style="color: #BF7692 ; border-color:  #BF7692 ;">
+                <p class="text-center">
+                    {{rol.rol}}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

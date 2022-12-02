@@ -1,0 +1,27 @@
+<div class="container">
+    <div>
+        <a class="float-end btn" routerLink="/" style="color: #BF7692;">Volver</a>
+        <h1 class="display-3">
+            <p class="text-center" style="color: #BF7692;">
+                X-Force Team
+            </p>
+        </h1>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4 mb-2" *ngIf="team">
+        <div class="col" *ngFor="let dev of team">
+          <div class="card h-100">
+            <i class="{{dev.icon}} fa-3x m-1"></i>
+            <div class="card-body">
+              <h5 class="card-title">{{dev.developer}}</h5>
+              <p class="card-text text-center">
+                <strong>{{dev.rol}}</strong>
+              </p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">{{dev.email}}</small>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+<div class="card mb-3 pt-3 mt-3" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-12 col-sm-4">
+        <p class="text-center">
+          <i class="fa-solid fa-user fa-10x ps-4" style="color: #BF7692;"></i>
+        </p>
+      </div>
+      <div class="col-12 col-sm-8" *ngIf="usuario">
+        <div class="card-body">
+            <p class="h6 card-title" style="color: #BF7692;">
+              <strong>
+                {{usuario.priNombre}} {{usuario.segNombre}} {{usuario.priApellido}} {{usuario.segApellido}}
+              </strong>
+            </p>
+          
+          <p class="card-text">
+            <em>
+              <i class="fa-solid fa-id-card"></i>
+              {{usuario.documento}}
+            </em> <br>
+
+            <em>
+              <i class="fa-solid fa-phone"></i>
+              {{usuario.celular}}
+            </em> <br>
+
+            <em *ngIf="usuario.roles">
+              <i class="fa-solid fa-key"></i>
+              {{usuario.roles[0].rol}}
+            </em>
+          </p>
+          <p class="card-text text-center"><small class="text-muted">
+            {{usuario.correoElec}}
+          </small> 
+         </p>
+        </div>
+      </div>
+    </div>
+  </div>

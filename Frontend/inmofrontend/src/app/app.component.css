@@ -1,0 +1,21 @@
+.content{
+    min-height: 505px;
+}
+
+.content-outer-container{
+    min-height:100%;
+}
+
+.content-inner-container{
+    padding-bottom:36px;
+}
+
+.footer-container {
+    height: 24px;
+    margin-top: -36px;
+  }
+  
+.footer-content {
+margin: 0 auto;
+text-align: center;
+}
